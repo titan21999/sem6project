@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .product {
+            display: flex;
+        }
+        .product-image {
+            flex: 1;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-details {
+            flex: 2;
+            padding-left: 20px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-description {
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .add-to-cart {
+            margin-top: 20px;
+        }
+        .add-to-cart button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-to-cart button:hover {
+            background-color: #0b5bd7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="product-image">
+                <img src="product1.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Product 1</div>
+                <div class="product-description">
+                    The item you were searching for has arrived finally!!!
+                </div>
+                <div class="product-price">$19.99</div>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
