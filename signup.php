@@ -34,43 +34,88 @@
         input[type=submit]:hover {
             background-color: #45a049;
         }
+        header {
+           background-color: #333;
+           color: #fff;
+           padding: 20px;
+           text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Shoppers stop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prodcat.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Signup Form</h2>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
 
-<div class="container">
-    <h2>Signup Form</h2>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" required>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
 
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" required>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <input type="submit" value="Signup">
-    </form>
-</div>
+                <input type="submit" value="Signup">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Welcome-Store</p>
+    </footer>
 
 <?php
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Establish MySQL connection
-    $mysqli = new mysqli("localhost", "username", "password", "user_accounts");
+    $mysqli = new mysqli("localhost", "root", "", "usersinfo");
 
     // Check connection
     if ($mysqli->connect_error) {
