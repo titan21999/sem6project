@@ -591,6 +591,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 			echo'<script>alert("Reservation Successful");</script>';
 		}else{
 			echo "Insert Error";
+    echo'<script>alert("Reservation not Successful");</script>';
 		}
 
 	}
