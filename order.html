@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    <form action="order.php" method="post">
+        <label for="item">Select Item:</label>
+        <select name="item" id="item">
+            <option value="burger">Burger</option>
+            <option value="pizza">Pizza</option>
+            <option value="salad">Salad</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" min="1" value="1">
+        <input type="submit" value="Order Now">
+    </form>
+</body>
+</html>
